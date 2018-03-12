@@ -2,6 +2,8 @@
 
 a middleware that try to make minimal changes to spider while implementing concurrency.
 
+不少反爬虫做的比较复杂的网站，可能需要上selenium+无头浏览器才能爬取，但是selenium对并发并不友好，Scrapy一旦用上selenium，异步的优势就体现不出来了，效率会极大降低。multi-selenium中间件通过利用了浏览器本身的并发机制，通过js和scrapy原生的异步调度结合，实现了selenium的伪并发，大大提高了爬取复杂网站的效率。
+
 Documentation
 -------------
 
